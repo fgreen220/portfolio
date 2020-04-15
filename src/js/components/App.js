@@ -1,7 +1,7 @@
 import React, { Component, useState, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { IconButton, Button, Modal, Divider, Tooltip } from '@material-ui/core';
-import { Home, Close, Mail } from '@material-ui/icons';
+import { IconButton, Button, Modal, Divider, AppBar, Toolbar } from '@material-ui/core';
+import { Close, Mail, Assignment, Launch, GitHub } from '@material-ui/icons';
 import testImage from '../../assets/test-image.png';
 import testImage2 from '../../assets/ios-weather.jpg';
 
@@ -19,19 +19,11 @@ const App = () => {
 
   return(
     <div id='app-wrapper'>
+      <div id='nav-bar'>
+        <Button disableFocusRipple={true} disableRipple={true}>Contact</Button>
+        <Button disableFocusRipple={true} disableRipple={true}>Resume</Button>
+      </div>
       <div id='app-column1'>
-        <div id='nav-bar'>
-          <IconButton className='nav-icon'>
-            <Home />
-          </IconButton>
-          {/* <Tooltip title='Contact'> */}
-            <IconButton id='nav-contact-icon' className='nav-icon' onMouseEnter={() => setContactMouseOver(() => true)}
-              onMouseLeave={() => setContactMouseOver(() => false)}
-            >
-              {contactMouseOver ? <p>Contact</p> : <Mail />}
-            </IconButton>
-          {/* </Tooltip> */}
-        </div>
         <div id='column1-title'>
           <h1>FRANCE GREEN</h1>
           <h3>Full stack engineer</h3>
@@ -39,10 +31,18 @@ const App = () => {
       </div>   
       <div id='app-column2'>
         <div id='project-tiles'>
-          <Button disableRipple><img src={testImage} width='100px' height='100px' 
-            onClick={() => setYoutubeCloneModalOpen(() => true)}
-          />
-          </Button>
+          <div class='project-image-wrapper'>
+            <img src={testImage} width='100px' height='100px' 
+              onClick={() => setYoutubeCloneModalOpen(() => true)}
+            />
+            <p>React | TypeScript | React-Router | Sass | Node | Express | Youtube Api</p>
+            <Divider />
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+            </p>
+          </div>
           <Modal className='project-modal' open={youtubeCloneModalOpen} onClose={() => setYoutubeCloneModalOpen(() => false)}>
             <div id='youtube-modal-wrapper' onClick={event => {
               event.persist();
@@ -51,41 +51,33 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <Button disableRipple><img src={testImage} width='100px' height='100px'/></Button>
+                <img src={testImage} width='100px' height='100px'/>
                 <div className='modal-text-content'>
-                  <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
-                    setYoutubeCloneModalOpen(() => false)
-                  }>
-                      <Close />
-                  </IconButton>
                   <div className='centered-modal-text'>
-                    <ul>
-                      <li>React</li>
-                      <li>TypeScript</li>
-                      <li>React-Router</li>
-                      <li>Sass</li>
-                      <li>Node</li>
-                      <li>Express</li>
-                      <li>Youtube Api</li>
-                    </ul>
-                    <Divider />
-                    <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-                    the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                      <p>Live Project</p>
+                      <p>Source Code</p>
+                    <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
+                    setYoutubeCloneModalOpen(() => false)
+                    }>
+                        <Close />
+                    </IconButton>
                   </div>
                 </div>
               </div>
             </div>
           </Modal>
-          <Button disableRipple><img src={testImage2} width='100px' height='100px' 
-            onClick={() => setIosWeatherCloneModalOpen(() => true)}
-          />
-          </Button>
+          <div class='project-image-wrapper'>
+            <img src={testImage2} width='100px' height='100px' 
+              onClick={() => setIosWeatherCloneModalOpen(() => true)}
+            />
+            <p>React | React-Router | CSS3 | Node | Express | Dark Sky Api | Open Weather Maps Api</p>
+            <Divider />
+            <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+            </p>
+          </div>
           <Modal className='project-modal' open={iosWeatherCloneModalOpen} onClose={() => setIosWeatherCloneModalOpen(() => false)}>
             <div id='weather-modal-wrapper' onClick={event => {
               event.persist();
@@ -94,39 +86,26 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <Button disableRipple><img src={testImage2} width='100px' height='100px'/></Button>
-                <div className='modal-text-content'>
-                  <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
-                    setIosWeatherCloneModalOpen(() => false)
-                  }>
-                      <Close />
-                  </IconButton>
-                  <div className='centered-modal-text'>
-                    <ul>
-                      <li>React</li>
-                      <li>React-Router</li>
-                      <li>Css3</li>
-                      <li>Node</li>
-                      <li>Express</li>
-                      <li>Dark Sky Api</li>
-                      <li>Open Weather Maps Api</li>
-                    </ul>
-                    <Divider />
-                    <p>
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                    industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-                    and scrambled it to make a type specimen book. It has survived not only five centuries, but also
-                    the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the
-                    1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with
-                    desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                    </p>
+                <img src={testImage2} width='100px' height='100px'/>
+                  <div className='modal-text-content'>
+                    <div className='centered-modal-text'>
+                      <p>Live Project</p>
+                      <p>Source Code</p>
+                      <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
+                        setIosWeatherCloneModalOpen(() => false)
+                      }>
+                          <Close />
+                      </IconButton>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
           </Modal>
         </div>
       </div>   
+      <div id='app-column-3'>
+         
+      </div>
     </div>
   );
 }
