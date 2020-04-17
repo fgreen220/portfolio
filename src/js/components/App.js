@@ -31,17 +31,26 @@ const App = () => {
       </div>   
       <div id='app-column2'>
         <div id='project-tiles'>
-          <div class='project-image-wrapper'>
+          <div className='project-image-wrapper'>
             <img src={testImage} width='100px' height='100px' 
               onClick={() => setYoutubeCloneModalOpen(() => true)}
             />
-            <p>React | TypeScript | React-Router | Sass | Node | Express | Youtube Api</p>
-            <Divider />
-            <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-            </p>
+            <div id='reacttube-text'>
+              <ul className='technologies-used-list'>
+                <li>React</li>
+                <li>TypeScript</li>
+                <li>React-Router</li>
+                <li>Sass</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>YouTube Api</li>
+              </ul>
+              <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+              </p>
+            </div>
           </div>
           <Modal className='project-modal' open={youtubeCloneModalOpen} onClose={() => setYoutubeCloneModalOpen(() => false)}>
             <div id='youtube-modal-wrapper' onClick={event => {
@@ -66,17 +75,26 @@ const App = () => {
               </div>
             </div>
           </Modal>
-          <div class='project-image-wrapper'>
+          <div className='project-image-wrapper' id='ios-project-image-wrapper'>
             <img src={testImage2} width='100px' height='100px' 
               onClick={() => setIosWeatherCloneModalOpen(() => true)}
             />
-            <p>React | React-Router | CSS3 | Node | Express | Dark Sky Api | Open Weather Maps Api</p>
-            <Divider />
-            <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book.
-            </p>
+            <div id='weather-text'>
+              <ul className='technologies-used-list'>
+                <li>React</li>
+                <li>React-Router</li>
+                <li>CSS3</li>
+                <li>Node</li>
+                <li>Express</li>
+                <li>Dark Sky Api</li>
+                <li>OWM Api</li>
+              </ul>
+              <p>
+              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+              and scrambled it to make a type specimen book.
+              </p>
+            </div>
           </div>
           <Modal className='project-modal' open={iosWeatherCloneModalOpen} onClose={() => setIosWeatherCloneModalOpen(() => false)}>
             <div id='weather-modal-wrapper' onClick={event => {
