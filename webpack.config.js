@@ -34,6 +34,12 @@ module.exports = {
         ]
       },
       {
+        test:/\.(pdf)$/,
+        use: [
+          'file-loader'
+        ]
+      },
+      {
         enforce:'pre',
         test: /\.js$/,
         loader: 'source-map-loader'

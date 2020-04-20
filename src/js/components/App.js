@@ -2,8 +2,11 @@ import React, { Component, useState, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { IconButton, Button, Modal, Divider, AppBar, Toolbar } from '@material-ui/core';
 import { Close, Mail, Assignment, Launch, GitHub } from '@material-ui/icons';
-import testImage from '../../assets/test-image.png';
-import testImage2 from '../../assets/ios-weather.jpg';
+import reactTubeImage from '../../assets/youtube-app-clone-screenshot.png';
+import weatherAppImage from '../../assets/weather-app-clone-screenshot.png';
+import resume from '../../assets/france-green-resume-2020.pdf';
+import weatherAppGif from '../../assets/weather-app-clone-gif.gif';
+import reactTubeGif from '../../assets/youtube-app-clone-gif.gif';
 
 const App = () => {
   
@@ -15,13 +18,18 @@ const App = () => {
 
   const [youtubeCloneModalOpen, setYoutubeCloneModalOpen] = useState(false);
   const [iosWeatherCloneModalOpen, setIosWeatherCloneModalOpen] = useState(false);
-  const [contactMouseOver, setContactMouseOver] = useState(false);
+  const [resumeOpen, setResumeOpen] = useState(false);
 
   return(
     <div id='app-wrapper'>
       <div id='nav-bar'>
-        <Button disableFocusRipple={true} disableRipple={true}>Contact</Button>
-        <Button disableFocusRipple={true} disableRipple={true}>Resume</Button>
+        <Button disableFocusRipple={true} disableRipple={true}
+          onClick={() => window.open('mailto:france.green@hotmail.com')}
+        >
+          Contact</Button>
+        <Button disableFocusRipple={true} disableRipple={true}>
+          <a id='resume-link' target='_blank' href={resume}>Resume</a>
+        </Button>
       </div>
       <div id='app-column1'>
         <div id='column1-title'>
@@ -32,7 +40,7 @@ const App = () => {
       <div id='app-column2'>
         <div id='project-tiles'>
           <div className='project-image-wrapper'>
-            <img src={testImage} width='100px' height='100px' 
+            <img src={reactTubeImage} width='100px' height='100px' 
               onClick={() => setYoutubeCloneModalOpen(() => true)}
             />
             <div id='reacttube-text'>
@@ -43,6 +51,7 @@ const App = () => {
                 <li>Sass</li>
                 <li>Node</li>
                 <li>Express</li>
+                <li>Webpack</li>
                 <li>YouTube Api</li>
               </ul>
               <p>
@@ -60,11 +69,13 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <img src={testImage} width='100px' height='100px'/>
+                <img src={reactTubeGif} width='100px' height='100px'/>
                 <div className='modal-text-content'>
                   <div className='centered-modal-text'>
                       <p>Live Project</p>
-                      <p>Source Code</p>
+                      <a target='_blank' href='https://github.com/fgreen220/youtubeAppClone'>
+                        <p>Source Code</p>
+                      </a>
                     <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
                     setYoutubeCloneModalOpen(() => false)
                     }>
@@ -76,9 +87,7 @@ const App = () => {
             </div>
           </Modal>
           <div className='project-image-wrapper' id='ios-project-image-wrapper'>
-            <img src={testImage2} width='100px' height='100px' 
-              onClick={() => setIosWeatherCloneModalOpen(() => true)}
-            />
+            <img src={weatherAppImage} width='100px' height='100px' onClick={() => setIosWeatherCloneModalOpen(() => true)}/>
             <div id='weather-text'>
               <ul className='technologies-used-list'>
                 <li>React</li>
@@ -86,6 +95,9 @@ const App = () => {
                 <li>CSS3</li>
                 <li>Node</li>
                 <li>Express</li>
+                <li>Babel</li>
+                <li>Webpack</li>
+                <li>PostgreSQL</li>
                 <li>Dark Sky Api</li>
                 <li>OWM Api</li>
               </ul>
@@ -104,11 +116,13 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <img src={testImage2} width='100px' height='100px'/>
+                <img src={weatherAppGif} width='100px' height='100px'/>
                   <div className='modal-text-content'>
                     <div className='centered-modal-text'>
                       <p>Live Project</p>
-                      <p>Source Code</p>
+                      <a target='_blank' href='https://github.com/fgreen220/weatherApp'>
+                        <p>Source Code</p>
+                      </a>
                       <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
                         setIosWeatherCloneModalOpen(() => false)
                       }>
