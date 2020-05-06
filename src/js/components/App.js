@@ -23,12 +23,11 @@ const App = () => {
   return(
     <div id='app-wrapper'>
       <div id='nav-bar'>
-        <Button disableFocusRipple={true} disableRipple={true}
-          onClick={() => window.open('mailto:france.green@hotmail.com')}
-        >
-          Contact</Button>
         <Button disableFocusRipple={true} disableRipple={true}>
-          <a id='resume-link' target='_blank' href={resume}>Resume</a>
+          <a class='nav-links' href='mailto:france.green@hotmail.com'>Contact</a>
+        </Button>
+        <Button disableFocusRipple={true} disableRipple={true}>
+          <a class='nav-links' target='_blank' href={resume}>Resume</a>
         </Button>
       </div>
       <div id='app-column1'>

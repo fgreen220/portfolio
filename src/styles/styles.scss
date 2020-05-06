@@ -13,9 +13,7 @@
     grid-template-columns:1fr;
     width:100%;
     padding:5rem 0 0 0;
-    border-bottom:1px solid rgba(0,0,0,0.2);
-    // background-image:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0, 0.5)),url('../assets/header-background.jpg');
-    // background-size:cover;
+    // border-bottom:1px solid rgba(0,0,0,0.2);
     #column1-title {
       grid-row:1/span 1;
       grid-column:1/span 1;
@@ -126,7 +124,7 @@ html {
     align-self:center;
     img {
       width:100%;
-      height:80%;
+      height:50%;
     }
   }
 }
@@ -148,7 +146,7 @@ html {
 }
 
 .modal-text-content {
-  height:100%;
+  height:50%;
   p {
     margin:0 1rem;
   }
@@ -164,9 +162,8 @@ html {
   background-color:white;
   height: 100%;
   align-items: center;
-  display: flex;
+  display: grid;
   justify-content: center;
-  flex-direction:column;
   margin-top:0.5rem;
   p {
     cursor: pointer;
@@ -202,13 +199,13 @@ html {
   }
 }
 
-#resume-link {
+.nav-links {
   text-decoration:none;
   color:white;
 }
 
 #reacttube-text {
-  background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0, 0.7)),url('../assets/video-background.jpg');
+  background-color:gray;
   background-size:cover;
   p {
     color:white;
@@ -216,7 +213,7 @@ html {
 }
 
 #weather-text {
-  background-image:linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0, 0.7)),url('../assets/weather-background.jpg');
+  background-color:gray;
   background-size:cover;
   p {
     color:white;
@@ -255,7 +252,7 @@ html {
   .technologies-used-list {
     white-space:nowrap;
     grid-template-columns:1fr;
-    border-bottom:1px solid rgba(0,0,0,0.2);
+    // border-bottom:1px solid rgba(0,0,0,0.2);
     padding:1rem;
   }
 }
