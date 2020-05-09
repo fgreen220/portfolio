@@ -71,10 +71,12 @@ const App = () => {
                 <img src={reactTubeGif} width='100px' height='100px'/>
                 <div className='modal-text-content'>
                   <div className='centered-modal-text'>
+                    <a target='_blank' href='https://fgreen220.github.io/ytappclone/'>
                       <p>Live Project</p>
-                      <a target='_blank' href='https://github.com/fgreen220/youtubeAppClone'>
-                        <p>Source Code</p>
-                      </a>
+                    </a>
+                    <a target='_blank' href='https://github.com/fgreen220/youtubeAppClone'>
+                      <p>Source Code</p>
+                    </a>
                     <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
                     setYoutubeCloneModalOpen(() => false)
                     }>
@@ -118,7 +120,9 @@ const App = () => {
                 <img src={weatherAppGif} width='100px' height='100px'/>
                   <div className='modal-text-content'>
                     <div className='centered-modal-text'>
-                      <p>Live Project</p>
+                      <a target='_blank' href='https://fgreen220.github.io/weatherappc/'>
+                        <p>Live Project</p>
+                      </a>
                       <a target='_blank' href='https://github.com/fgreen220/weatherApp'>
                         <p>Source Code</p>
                       </a>

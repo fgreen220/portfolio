@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --max-old-space-size=8192",
     "start": "webpack-dev-server --open --mode development",
-    "node-sass": "node-sass --output-style compressed -o dist/css src/styles/styles.scss"
+    "node-sass": "node-sass --output-style compressed -o dist/ src/styles/styles.scss"
   },
   "keywords": [],
   "author": "",
