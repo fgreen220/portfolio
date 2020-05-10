@@ -156,6 +156,12 @@ html {
   display:flex;
   justify-content:center;
   margin:0 auto;
+  span {
+    svg {
+      width:10vw;
+      height:10vh;
+    }
+  }
 }
 
 .centered-modal-text {
@@ -169,12 +175,14 @@ html {
     cursor: pointer;
     width:fit-content;
     text-align:center;
-    font-size:calc(max(2.5vw, 1rem));
+    font-size:calc(max(2.5vw, 3rem));
     margin:0.5rem 0;
   }
   a {
     text-decoration:none;
     color:black;
+    display:flex;
+    justify-content:center;
   }
 }
 

@@ -24,10 +24,10 @@ const App = () => {
     <div id='app-wrapper'>
       <div id='nav-bar'>
         <Button disableFocusRipple={true} disableRipple={true}>
-          <a class='nav-links' href='mailto:france.green@hotmail.com'>Contact</a>
+          <a className='nav-links' href='mailto:france.green@hotmail.com'>Contact</a>
         </Button>
         <Button disableFocusRipple={true} disableRipple={true}>
-          <a class='nav-links' target='_blank' href={resume}>Resume</a>
+          <a className='nav-links' target='_blank' href={resume}>Resume</a>
         </Button>
       </div>
       <div id='app-column1'>
@@ -74,7 +74,7 @@ const App = () => {
                     <a target='_blank' href='https://fgreen220.github.io/ytappclone/'>
                       <p>Live Project</p>
                     </a>
-                    <a target='_blank' href='https://github.com/fgreen220/youtubeAppClone'>
+                    <a target='_blank' href='https://github.com/fgreen220/ytclonecode'>
                       <p>Source Code</p>
                     </a>
                     <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
