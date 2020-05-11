@@ -47,16 +47,16 @@ const App = () => {
                 <li>React</li>
                 <li>TypeScript</li>
                 <li>React-Router</li>
+                <li>Node | Express</li>
                 <li>Sass</li>
-                <li>Node</li>
-                <li>Express</li>
+                <li>Material-UI</li>
                 <li>Webpack</li>
+                <li>Babel</li>
                 <li>YouTube Api</li>
               </ul>
               <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-              and scrambled it to make a type specimen book.
+                Clone of the mobile Youtube app with limited functionality (responsively displaying,
+                viewing, and searching for videos).
               </p>
             </div>
           </div>
@@ -74,7 +74,7 @@ const App = () => {
                     <a target='_blank' href='https://fgreen220.github.io/ytappclone/'>
                       <p>Live Project</p>
                     </a>
-                    <a target='_blank' href='https://github.com/fgreen220/ytclonecode'>
+                    <a target='_blank' href='https://github.com/fgreen220/youtubeAppClone'>
                       <p>Source Code</p>
                     </a>
                     <IconButton disableFocusRipple disableRipple className='close-modal' onClick={() =>
@@ -93,19 +93,17 @@ const App = () => {
               <ul className='technologies-used-list'>
                 <li>React</li>
                 <li>React-Router</li>
+                <li>Node | Express</li>
+                <li>PostgreSQL</li>
                 <li>CSS3</li>
-                <li>Node</li>
-                <li>Express</li>
                 <li>Babel</li>
                 <li>Webpack</li>
-                <li>PostgreSQL</li>
                 <li>Dark Sky Api</li>
                 <li>OWM Api</li>
               </ul>
               <p>
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
-              and scrambled it to make a type specimen book.
+                Clone of the iOS Weather App (view detailed weather information for specific cities)
+                with enhanced login and guest user functionality.
               </p>
             </div>
           </div>
