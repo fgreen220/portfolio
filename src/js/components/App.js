@@ -1,12 +1,12 @@
-import React, { Component, useState, Fragment } from 'react';
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import { IconButton, Button, Modal, Divider, AppBar, Toolbar } from '@material-ui/core';
-import { Close, Mail, Assignment, Launch, GitHub } from '@material-ui/icons';
-import reactTubeImage from '../../assets/youtube-app-clone-screenshot.png';
-import weatherAppImage from '../../assets/weather-app-clone-screenshot.png';
-import resume from '../../assets/france-green-resume-2020.pdf';
-import weatherAppGif from '../../assets/weather-app-clone-gif.gif';
-import reactTubeGif from '../../assets/youtube-app-clone-gif.gif';
+import { IconButton, Button, Modal } from '@material-ui/core';
+import { Close } from '@material-ui/icons';
+// import reactTubeImage from '../../assets/youtube-app-clone-screenshot.png';
+// import weatherAppImage from '../../assets/weather-app-clone-screenshot.png';
+// import resume from '../../assets/france-green-resume-2020.pdf';
+// import weatherAppGif from '../../assets/weather-app-clone-gif.gif';
+// import reactTubeGif from '../../assets/youtube-app-clone-gif.gif';
 
 const App = () => {
   
@@ -27,7 +27,7 @@ const App = () => {
           <a className='nav-links' href='mailto:france.green@hotmail.com'>Contact</a>
         </Button>
         <Button disableFocusRipple={true} disableRipple={true}>
-          <a className='nav-links' target='_blank' href={resume}>Resume</a>
+          <a className='nav-links' target='_blank' href='france-green-resume-2020.pdf'>Resume</a>
         </Button>
       </div>
       <div id='app-column1'>
@@ -39,7 +39,7 @@ const App = () => {
       <div id='app-column2'>
         <div id='project-tiles'>
           <div className='project-image-wrapper'>
-            <img src={reactTubeImage} width='100px' height='100px' 
+            <img src='youtube-app-clone-screenshot.png' width='100px' height='100px' 
               onClick={() => setYoutubeCloneModalOpen(() => true)}
             />
             <div id='reacttube-text'>
@@ -54,10 +54,7 @@ const App = () => {
                 <li>Babel</li>
                 <li>YouTube Api</li>
               </ul>
-              <p>
-                Clone of the mobile Youtube app with limited functionality (responsively displaying,
-                viewing, and searching for videos).
-              </p>
+              <p>Clone of the mobile Youtube app with limited functionality (responsively displaying, viewing, and searching for videos).</p>
             </div>
           </div>
           <Modal className='project-modal' open={youtubeCloneModalOpen} onClose={() => setYoutubeCloneModalOpen(() => false)}>
@@ -68,7 +65,7 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <img src={reactTubeGif} width='100px' height='100px'/>
+                <img src='youtube-app-clone-gif.gif' width='100px' height='100px'/>
                 <div className='modal-text-content'>
                   <div className='centered-modal-text'>
                     <a target='_blank' href='https://fgreen220.github.io/ytappclone/'>
@@ -88,7 +85,7 @@ const App = () => {
             </div>
           </Modal>
           <div className='project-image-wrapper' id='ios-project-image-wrapper'>
-            <img src={weatherAppImage} width='100px' height='100px' onClick={() => setIosWeatherCloneModalOpen(() => true)}/>
+            <img src='weather-app-clone-screenshot.png' width='100px' height='100px' onClick={() => setIosWeatherCloneModalOpen(() => true)}/>
             <div id='weather-text'>
               <ul className='technologies-used-list'>
                 <li>React</li>
@@ -101,10 +98,7 @@ const App = () => {
                 <li>Dark Sky Api</li>
                 <li>OWM Api</li>
               </ul>
-              <p>
-                Clone of the iOS Weather App (view detailed weather information for specific cities)
-                with enhanced login and guest user functionality.
-              </p>
+              <p>Clone of the iOS Weather App (view detailed weather information for specific cities) with enhanced login and guest user functionality.</p>
             </div>
           </div>
           <Modal className='project-modal' open={iosWeatherCloneModalOpen} onClose={() => setIosWeatherCloneModalOpen(() => false)}>
@@ -115,7 +109,7 @@ const App = () => {
               }
             }}>
               <div className='clone-modal'>
-                <img src={weatherAppGif} width='100px' height='100px'/>
+                <img src='weather-app-clone-gif.gif' width='100px' height='100px'/>
                   <div className='modal-text-content'>
                     <div className='centered-modal-text'>
                       <a target='_blank' href='https://fgreen220.github.io/weatherappc/'>
